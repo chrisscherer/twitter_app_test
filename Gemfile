@@ -1,16 +1,28 @@
-#source 'https://rubygems.org'
 source :rubygems
-ruby '2.1.0'
 
-gem 'sinatra', '~>1.4.4'
+# PostgreSQL driver
+gem 'pg'
+
+# Sinatra driver
+gem 'sinatra'
+
+# Use Thin for our web server
 gem 'thin'
 
-gem 'twitter'
+gem 'activesupport'
+gem 'activerecord'
 
-#gem 'activesupport'
-#gem 'activerecord'
-
-#gem 'rake'
-#gem 'bcrypt-ruby'
+gem 'rake'
 
 gem 'shotgun'
+
+gem 'pry'
+gem 'pry-nav'
+
+gem 'oauth'
+gem 'twitter'
+
+group :test do
+  gem 'faker'
+  gem 'rspec'
+end
